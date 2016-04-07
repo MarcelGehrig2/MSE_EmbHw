@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst NIOS2.sysid -pg 1 -lvl 2 -y 130
+preplace inst NIOS2.clk_0 -pg 1 -lvl 1 -y 450
+preplace inst NIOS2.PLL -pg 1 -lvl 2 -y 430
+preplace inst NIOS2.CPU -pg 1 -lvl 1 -y 50
+preplace inst NIOS2.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst NIOS2 -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst NIOS2.SDRAM_ctrl -pg 1 -lvl 2 -y 310
+preplace inst NIOS2.LEDs -pg 1 -lvl 2 -y 210
+preplace netloc EXPORT<net_container>NIOS2</net_container>(SLAVE)NIOS2.sdram_ctl_wire,(SLAVE)SDRAM_ctrl.wire) 1 0 2 NJ 380 NJ
+preplace netloc INTERCONNECT<net_container>NIOS2</net_container>(SLAVE)LEDs.s1,(SLAVE)PLL.pll_slave,(SLAVE)SDRAM_ctrl.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)CPU.data_master,(SLAVE)CPU.jtag_debug_module,(MASTER)CPU.instruction_master,(SLAVE)sysid.control_slave) 1 0 2 170 180 420
+preplace netloc FAN_OUT<net_container>NIOS2</net_container>(SLAVE)sysid.clk,(SLAVE)jtag_uart.clk,(SLAVE)CPU.clk,(SLAVE)LEDs.clk,(MASTER)PLL.c0,(SLAVE)SDRAM_ctrl.clk) 1 0 3 130 200 460 420 680
+preplace netloc EXPORT<net_container>NIOS2</net_container>(SLAVE)NIOS2.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>NIOS2</net_container>(SLAVE)LEDs.reset,(SLAVE)SDRAM_ctrl.reset,(MASTER)CPU.jtag_debug_module_reset,(SLAVE)PLL.inclk_interface_reset,(SLAVE)jtag_uart.reset,(SLAVE)sysid.reset,(SLAVE)CPU.reset_n,(MASTER)clk_0.clk_reset) 1 0 2 150 220 440
+preplace netloc EXPORT<net_container>NIOS2</net_container>(MASTER)NIOS2.sdram_clk,(MASTER)PLL.c2) 1 2 1 N
+preplace netloc EXPORT<net_container>NIOS2</net_container>(SLAVE)LEDs.external_connection,(SLAVE)NIOS2.leds) 1 0 2 NJ 240 NJ
+preplace netloc EXPORT<net_container>NIOS2</net_container>(SLAVE)NIOS2.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>NIOS2</net_container>(SLAVE)jtag_uart.irq,(MASTER)CPU.d_irq) 1 1 1 N
+preplace netloc POINT_TO_POINT<net_container>NIOS2</net_container>(SLAVE)PLL.inclk_interface,(MASTER)clk_0.clk) 1 1 1 N
+levelinfo -pg 1 0 100 790
+levelinfo -hier NIOS2 110 200 490 700

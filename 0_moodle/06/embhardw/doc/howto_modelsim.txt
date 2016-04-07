@@ -1,0 +1,58 @@
+#############################################################
+# howto simulate with modelsim
+#############################################################
+
+a) make sure you have the same folder structure or modify start.do script
+
+  ./src/vhdl/LCD_ctrl/LCD_ctrl.vhd              -> design
+  ./simulation/vhdl/lcd_controller_tb.vhd       -> testbench
+  ./simulation/vhdl/avalon_pkg/avalon_pkg.vhd   -> testbench (package for read & write access to the avalon bus)
+  ./simulation/modelsim/start.do                -> modelsim tcl script (build design and testbench)
+  ./simulation/modelsim/wave.do                 -> modelsim tcl script (wave)
+
+
+b) check signal names in your design entity / modify testbench and wave file if necessary
+
+    entity DMA_LCD_ctrl is
+            port (
+                    clk               : in    std_logic                    ;
+                    reset             : in    std_logic                    ;         
+                    -- master interface
+                    master_address    : out  std_logic_vector(31 downto 0);
+                    master_read       : out std_logic;
+                    master_readdata   : in std_logic_vector(7 downto 0) ;
+                    master_waitrequest : in std_logic;
+                    -- IRQ generation
+                    end_of_transaction_irq : out std_logic;         
+                    -- slave interface 
+                    avalon_address    : in    std_logic_vector(2 downto 0) ;
+                    avalon_cs         : in    std_logic                   ;  
+                    avalon_wr         : in    std_logic                    ;  
+                    avalon_write_data : in    std_logic_vector(31 downto 0);
+                    avalon_rd         : in    std_logic                    ;  
+                    avalon_read_data  : out    std_logic_vector(31 downto 0);
+                    -- LCD interface
+                    LCD_data          : out std_logic_vector(7 downto 0) ;
+                    LCD_CS_n          : out    std_logic ;          
+                    LCD_WR_n          : out    std_logic ;                          
+                    LCD_D_C_n         : out    std_logic 
+            );
+    end entity DMA_LCD_ctrl;
+
+c) start modelsim and navigate to ./simulation/vhdl/modelsim/
+
+
+d) run 'do start.do' in modelsim console to run the testbench
+
+
+e) try to modify test behaviour by enabling LCD_WRITE_TEST
+
+  ---------------------------------------------------------------------------------------
+  -- test selection, only _one_ test selection allowed!
+  ---------------------------------------------------------------------------------------
+  constant LCD_WRITE_TEST       : boolean                       := false;
+  constant LCD_DMA_TEST         : boolean                       := true;
+
+
+tested in
+* modelsim altera se 10.1b

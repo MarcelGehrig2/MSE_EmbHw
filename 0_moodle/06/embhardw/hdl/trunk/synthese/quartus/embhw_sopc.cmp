@@ -1,0 +1,16 @@
+	component embhw_sopc is
+		port (
+			clk_clk                              : in  std_logic                    := 'X'; -- clk
+			leds_external_connection_export      : out std_logic_vector(7 downto 0);        -- export
+			epcs_flash_controller_external_dclk  : out std_logic;                           -- dclk
+			epcs_flash_controller_external_sce   : out std_logic;                           -- sce
+			epcs_flash_controller_external_sdo   : out std_logic;                           -- sdo
+			epcs_flash_controller_external_data0 : in  std_logic                    := 'X'; -- data0
+			reset_reset_n                        : in  std_logic                    := 'X'; -- reset_n
+			dma_lcd_ctrl_conduit_data            : out std_logic_vector(7 downto 0);        -- data
+			dma_lcd_ctrl_conduit_CS_n            : out std_logic;                           -- CS_n
+			dma_lcd_ctrl_conduit_WR_n            : out std_logic;                           -- WR_n
+			dma_lcd_ctrl_conduit_D_C_n           : out std_logic                            -- D_C_n
+		);
+	end component embhw_sopc;
+

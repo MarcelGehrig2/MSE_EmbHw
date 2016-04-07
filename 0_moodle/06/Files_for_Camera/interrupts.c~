@@ -1,0 +1,59 @@
+/*
+ * interrupts.c
+ *
+ *  Created on: Mar 30, 2013
+ *      Author: theo
+ */
+#include "sys/alt_irq.h"
+#include "alt_types.h"
+#include "system.h"
+#include "io.h"
+#include "camera.h"
+#include "motion.h"
+
+char lcd_done = 1;
+unsigned int picture_count = 0;
+unsigned int motion_count = 0;
+
+static void timer_interrupt( void * context , alt_u32 id ) {
+	IOWR_16DIRECT(TIMER_0_BASE,0,0); //ack timer
+}
+
+static void DMA_LCD_interrupt( void * context , alt_u32 id ) {
+	IOWR_32DIRECT(DMA_LCD_BASE,0x10,1<<2); //ack LCD IRQ
+	lcd_done = 1;
+}
+
+static void DMA_camera_interrupt( void * context, alt_u32 id ) {
+	IOWR_8DIRECT(CAMERA_BASE,4,1<<5); //ack camera IRQ
+	picture_count++;
+}
+
+static void Motion_interrupt( void * context, alt_u32 id ) {
+	IOWR_8DIRECT(I2C_CORE_0_BASE,12,0x18); //ack i2c irqs
+	get_motion_axes ();
+	motion_count += 1;
+}
+
+void register_irq_isrs() {
+	alt_irq_register(DMA_LCD_IRQ,(void*)3,(alt_isr_func)DMA_LCD_interrupt);
+	alt_irq_register(TIMER_0_IRQ,(void*)2,(alt_isr_func)timer_interrupt);
+	alt_irq_register(CAMERA_IRQ,(void*)4,(alt_isr_func)DMA_camera_interrupt);
+	alt_irq_register(I2C_CORE_0_IRQ,(void*)5,(alt_isr_func)Motion_interrupt);
+}
+
+void init_wait_lcd_dma() {
+	lcd_done = 0;
+}
+
+void wait_lcd_dma_done() {
+	while (lcd_done == 0) {};
+}
+
+unsigned int get_picture_count() {
+	return picture_count;
+}
+
+unsigned int get_motion_count() {
+	return motion_count;
+}

@@ -1,0 +1,17 @@
+/*
+ * interrupts.h
+ *
+ *  Created on: Mar 30, 2013
+ *      Author: theo
+ */
+
+#ifndef INTERRUPTS_H_
+#define INTERRUPTS_H_
+
+void register_irq_isrs();
+void init_wait_lcd_dma();
+void wait_lcd_dma_done();
+unsigned int get_picture_count();
+unsigned int get_motion_count();
+
+#endif /* INTERRUPTS_H_ */

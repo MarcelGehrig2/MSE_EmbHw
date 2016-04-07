@@ -1,0 +1,24 @@
+19:27:21 **** Incremental Build of configuration Nios II for project led_counter ****
+make all 
+Info: Building ../led_counter_bsp/
+make --no-print-directory -C ../led_counter_bsp/
+[BSP build complete]
+[led_counter build complete]
+19:27:24 **** Build of configuration Nios II for project led_counter ****
+make all 
+Info: Building ../led_counter_bsp/
+make --no-print-directory -C ../led_counter_bsp/
+[BSP build complete]
+[led_counter build complete]
+19:27:25 **** Incremental Build of configuration Nios II for project led_counter ****
+make all 
+Info: Building ../led_counter_bsp/
+make --no-print-directory -C ../led_counter_bsp/
+[BSP build complete]
+[led_counter build complete]
+19:27:43 **** Incremental Build of configuration Nios II for project led_counter ****
+make all 
+Info: Building ../led_counter_bsp/
+make --no-print-directory -C ../led_counter_bsp/
+[BSP build complete]
+[led_counter build complete]

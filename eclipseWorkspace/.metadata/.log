@@ -1,0 +1,29 @@
+!SESSION 2016-04-07 17:00:03.166 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /opt/altera_lite/15.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /opt/altera_lite/15.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2016-04-07 17:00:58.238
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-04-07 17:00:58.238
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2016-04-07 17:00:58.873
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2016-04-07 17:00:58.873
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-07 17:08:50.380
+!MESSAGE Indexed 'led_counter_bsp' (80 sources, 153 headers) in 4.62 sec: 5,093 declarations; 8,291 references; 4 unresolved inclusions; 2 syntax errors; 12 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-04-07 17:08:51.122
+!MESSAGE Indexed 'led_counter' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-04-07 17:15:45.114
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [3-1.3]' --device=1 --instance=0 --sidp=0x2001020 --id=0x0 --timestamp=1460037355 /home/mgehrig2/MSE/EmbHw/labProject/software/led_counter/led_counter.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2016-04-07 17:15:48.057
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [3-1.3]' --device=1 --instance=0 --tcpport=auto --sidp=0x2001020 --id=0x0 --timestamp=1460037355]

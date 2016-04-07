@@ -1,0 +1,227 @@
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity DMA_LCD_ctrl is
+	port (
+		clk               : in    std_logic                    ;
+		reset             : in    std_logic                    ;         
+		-- master interface
+ 		master_address	  : out  std_logic_vector(31 downto 0);
+		master_read	  : out std_logic;
+		master_readdata	  : in std_logic_vector(7 downto 0) ;
+		master_waitrequest : in std_logic;
+		-- IRQ generation
+		end_of_transaction_irq : out std_logic;		
+		-- slave interface 
+		avalon_address    : in    std_logic_vector(2 downto 0) ;
+		avalon_cs         : in    std_logic                   ;  
+		avalon_wr         : in    std_logic                    ;  
+		avalon_write_data : in    std_logic_vector(31 downto 0);
+		avalon_rd         : in    std_logic                    ;  
+		avalon_read_data  : out    std_logic_vector(31 downto 0);
+		-- LCD interface
+		LCD_data          : out std_logic_vector(7 downto 0) ;
+		LCD_CS_n	  : out    std_logic ;		
+		LCD_WR_n	  : out    std_logic ;				
+		LCD_D_C_n	  : out    std_logic 
+	);
+end entity DMA_LCD_ctrl;
+
+architecture rtl of DMA_LCD_ctrl is
+
+signal LCD_data_reg : std_logic_vector(7 downto 0);
+signal address_reg : std_logic_vector(2 downto 0);
+signal LCD_direct , base_image_pointer_en: std_logic;
+signal base_image_pointer : unsigned(31 downto 0);
+signal size_image : unsigned(31 downto 0);
+signal image_pointer : unsigned(31 downto 0);
+signal start, master_read_s : std_logic;
+signal IRQ_clr, size_image_en : std_logic;
+signal run, master_read_en, master_data_valid : std_logic;
+signal buffer_ready,buffer_clr : std_logic;
+signal buffer_reg : std_logic_vector(7 downto 0);
+		
+type state is (IDLE,TAST,TWRL1,TWRL2,TWRH1,TwRH2);
+signal curr_state, next_state: state;
+
+begin
+-------- register model -----------
+-- 000 write command to LCD
+-- 001 write data to LCD
+-- 010 write pointer of the image to copy
+-- 011 write size of the image to copy
+-- 100 control register 
+--	bit 0 => start transfer 
+--	bit 1 => reserved 
+--	bit 2 => IRQ ack 
+
+
+-- registered inputs
+
+
+
+process(avalon_cs,avalon_wr,avalon_write_data,avalon_address)
+begin
+LCD_direct <= '0';
+base_image_pointer_en <= '0';
+size_image_en <= '0';
+start <= '0';
+IRQ_clr <= '0';
+if avalon_cs='1' and avalon_wr = '1' then
+	if avalon_address = "000" then
+		LCD_direct <= '1';
+	elsif avalon_address = "001" then
+		LCD_direct <= '1';
+	elsif avalon_address = "010" then
+		base_image_pointer_en <= '1';
+	elsif avalon_address = "011" then
+		size_image_en <= '1';
+	elsif avalon_address = "100" then
+		start <= avalon_write_data(0);
+		IRQ_clr <= avalon_write_data(2); -- IRQ ack
+	end if;		
+end if;
+end process;
+
+avalon_read_data <= 	std_logic_vector(base_image_pointer) when avalon_address = "010" else
+			std_logic_vector(size_image) when avalon_address = "011" else
+			std_logic_vector(image_pointer) when avalon_address = "100" else
+			(others=>'1');			
+
+-- writing the registers
+process(reset,clk)
+begin
+if reset = '1' then
+	base_image_pointer <= (others=>'0');
+	size_image <= (others=>'0');
+elsif rising_edge(clk) then
+	if base_image_pointer_en = '1' then
+		base_image_pointer <= unsigned(avalon_write_data);
+	end if;
+	if size_image_en = '1' then
+		size_image <= unsigned(avalon_write_data);
+	end if;
+end if;
+end process;
+
+
+-- the address pointer
+process(reset,clk)
+begin
+if reset = '1' then
+	image_pointer <= (others=>'0');
+	run <= '0';
+	master_read_en <= '0';
+	end_of_transaction_irq <= '0';
+elsif rising_edge(clk) then
+	master_read_en <= '0';
+	if start = '1' then
+		image_pointer <= base_image_pointer;
+		run <='1';
+	elsif run = '1' then
+		if master_read_s = '0' and master_read_en = '0' and buffer_ready = '0' then -- if master not busy
+			master_read_en <= '1'; -- start reading
+		end if;
+		if (base_image_pointer + size_image) = image_pointer then
+			run <= '0';
+			end_of_transaction_irq <= '1';
+		elsif master_data_valid = '1' and buffer_ready = '0' then
+			image_pointer <= image_pointer +1;
+		end if;		
+	end if;
+	if IRQ_clr = '1' then
+		end_of_transaction_irq <= '0';
+	end if;
+end if;
+end process;
+
+master_read <= master_read_s;
+
+-- avalon master read access
+master_address <= std_logic_vector(image_pointer);
+master_data_valid <= '1' when master_read_s = '1' and master_waitrequest = '0'
+			 else '0';
+
+process(reset,clk)
+begin
+if reset = '1' then
+	master_read_s <= '0';
+elsif rising_edge(clk) then
+	if master_read_en = '1' then
+		master_read_s <= '1';
+	elsif master_waitrequest = '0' then
+		master_read_s <= '0';
+	end if;
+end if;
+end process;
+
+------- LCD access
+
+-- registers
+
+process(reset,clk)
+begin
+if reset = '1' then
+	LCD_data_reg <= (others => '0');
+	address_reg  <= (others => '0');
+		buffer_clr <= '0';
+elsif rising_edge(clk) then
+  	buffer_clr <= '0';
+	if LCD_direct='1' then
+		LCD_data_reg <= avalon_write_data(7 downto 0);
+		address_reg <= avalon_address;
+	elsif buffer_ready = '1' and curr_state = IDLE then
+		LCD_data_reg <= buffer_reg;
+		address_reg <= "001";
+		buffer_clr <= '1';
+	end if;
+end if;
+end process;
+
+process(reset,clk)
+begin
+if reset = '1' then
+		buffer_reg <= (others => '0');
+		buffer_ready <= '0';
+elsif rising_edge(clk) then
+  	if buffer_clr = '1' then
+    		buffer_ready <= '0';
+	elsif master_data_valid = '1' then
+		buffer_reg <= master_readdata;
+		buffer_ready <= '1';
+	end if;
+end if;
+end process;
+
+
+
+
+-- state actualization
+process(reset,clk)
+begin
+if reset = '1' then
+	curr_state <= IDLE;
+elsif rising_edge(clk) then
+	curr_state <= next_state;
+end if;
+end process;
+
+-- state transitions
+next_state <= 	IDLE when curr_state = IDLE and LCD_direct = '0' and buffer_ready = '0' else
+		TAST when curr_state = IDLE and (LCD_direct = '1' or buffer_ready = '1') else
+		TWRL1 when curr_state = TAST  else
+		TWRL2 when curr_state = TWRL1 else
+		TWRH1 when curr_state = TWRL2 else
+		TWRH2 when curr_state = TWRH1 else
+		TAST when curr_state = TWRL1 else
+		IDLE;
+
+-- output generation
+	LCD_data  <= LCD_data_reg;
+	LCD_CS_n  <= '1' when curr_state = IDLE else '0';		
+	LCD_WR_n  <= '0' when curr_state = TWRL1 or curr_state = TWRL2	else '1';	
+	LCD_D_C_n <= address_reg(0);
+
+end architecture rtl; 
