@@ -1,0 +1,5 @@
+Use the FPGA progammer on quartus for loading the .sof file. Program the FPGA.
+
+In Eclipse, go to "debug configurations", and select the option "Enable browse for file system ELF file". In the field below indicate the path to the elf file contained in this compressed file.
+
+Launch the program, you're done. Your LCD should display the camera input.
