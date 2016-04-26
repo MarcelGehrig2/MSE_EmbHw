@@ -1,0 +1,38 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst base_system.sysid -pg 1 -lvl 3 -y 450
+preplace inst base_system.PLL -pg 1 -lvl 3 -y 770
+preplace inst base_system.vga_dma -pg 1 -lvl 1 -y 570
+preplace inst base_system.CPU.cpu -pg 1
+preplace inst base_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst base_system.lcd_ctrl -pg 1 -lvl 1 -y 430
+preplace inst base_system.CPU.reset_bridge -pg 1
+preplace inst base_system.CPU -pg 1 -lvl 2 -y 270
+preplace inst base_system.Systimer -pg 1 -lvl 3 -y 130
+preplace inst base_system.jtag_uart -pg 1 -lvl 3 -y 230
+preplace inst base_system.clk_0 -pg 1 -lvl 2 -y 790
+preplace inst base_system.CPU.clock_bridge -pg 1
+preplace inst base_system.sdram_ctrl -pg 1 -lvl 3 -y 630
+preplace inst base_system.ProfileTimer -pg 1 -lvl 3 -y 30
+preplace inst base_system.i2c_ctrl -pg 1 -lvl 3 -y 330
+preplace inst base_system.dipsw -pg 1 -lvl 3 -y 530
+preplace inst base_system.cam_ctrl -pg 1 -lvl 1 -y 270
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)cam_ctrl.camera,(SLAVE)base_system.cam) 1 0 1 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)base_system.reset,(SLAVE)clk_0.clk_in_reset) 1 0 2 NJ 820 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)lcd_ctrl.external,(SLAVE)base_system.lcd) 1 0 1 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)i2c_ctrl.i2c_port,(SLAVE)base_system.i2c) 1 0 3 NJ 210 NJ 210 NJ
+preplace netloc INTERCONNECT<net_container>base_system</net_container>(MASTER)clk_0.clk_reset,(SLAVE)ProfileTimer.reset,(SLAVE)lcd_ctrl.reset,(MASTER)CPU.debug_reset_request,(SLAVE)Systimer.reset,(SLAVE)cam_ctrl.reset,(SLAVE)i2c_ctrl.reset,(SLAVE)dipsw.reset,(SLAVE)vga_dma.reset,(SLAVE)sdram_ctrl.reset,(SLAVE)sysid.reset,(SLAVE)CPU.reset,(SLAVE)jtag_uart.reset,(SLAVE)PLL.inclk_interface_reset) 1 0 3 100 260 350 230 770
+preplace netloc FAN_OUT<net_container>base_system</net_container>(SLAVE)sdram_ctrl.clk,(MASTER)PLL.c0,(SLAVE)lcd_ctrl.clock,(SLAVE)vga_dma.clock,(SLAVE)jtag_uart.clk,(SLAVE)sysid.clk,(SLAVE)ProfileTimer.clk,(SLAVE)cam_ctrl.clock,(SLAVE)i2c_ctrl.clock,(SLAVE)CPU.clk,(SLAVE)dipsw.clk,(SLAVE)Systimer.clk) 1 0 4 80 240 330 190 750 740 1040
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)base_system.dipsw,(SLAVE)dipsw.external_connection) 1 0 3 NJ 560 NJ 560 NJ
+preplace netloc FAN_OUT<net_container>base_system</net_container>(SLAVE)Systimer.irq,(SLAVE)i2c_ctrl.irq,(SLAVE)cam_ctrl.interrupt,(MASTER)CPU.irq,(SLAVE)lcd_ctrl.irq,(SLAVE)jtag_uart.irq,(SLAVE)ProfileTimer.irq) 1 0 3 140 400 NJ 430 710
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)base_system.sdram,(SLAVE)sdram_ctrl.wire) 1 0 3 NJ 700 NJ 700 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(MASTER)base_system.dac_clk,(MASTER)PLL.c3) 1 3 1 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)clk_0.clk_in,(SLAVE)base_system.clk) 1 0 2 NJ 800 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(SLAVE)base_system.vga,(SLAVE)vga_dma.vga) 1 0 1 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(MASTER)base_system.sdram_clk,(MASTER)PLL.c2) 1 3 1 NJ
+preplace netloc EXPORT<net_container>base_system</net_container>(MASTER)base_system.mclk,(MASTER)PLL.c1) 1 3 1 NJ
+preplace netloc INTERCONNECT<net_container>base_system</net_container>(MASTER)CPU.data_master,(MASTER)vga_dma.master,(SLAVE)i2c_ctrl.slave,(SLAVE)dipsw.s1,(SLAVE)vga_dma.slave,(SLAVE)cam_ctrl.slave,(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)CPU.instruction_master,(SLAVE)ProfileTimer.s1,(SLAVE)Systimer.s1,(SLAVE)CPU.debug_mem_slave,(MASTER)cam_ctrl.master,(SLAVE)lcd_ctrl.slave,(MASTER)lcd_ctrl.master,(SLAVE)PLL.pll_slave,(SLAVE)sysid.control_slave,(SLAVE)sdram_ctrl.s1) 1 0 3 120 420 330 410 790
+preplace netloc POINT_TO_POINT<net_container>base_system</net_container>(MASTER)clk_0.clk,(SLAVE)PLL.inclk_interface) 1 2 1 N
+preplace netloc POINT_TO_POINT<net_container>base_system</net_container>(SLAVE)vga_dma.pixelclk,(MASTER)PLL.c4) 1 0 4 140 760 NJ 760 NJ 760 1020
+levelinfo -pg 1 0 50 1150
+levelinfo -hier base_system 60 170 470 830 1060

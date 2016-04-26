@@ -1,0 +1,254 @@
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:vga_dma_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:cam_ctrl_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:i2c_ctrl_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:lcd_ctrl_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:profiletimer_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:systimer_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:dipsw_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:sdram_ctrl_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:pll_pll_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:cpu_debug_mem_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:sysid_control_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|base_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:jtag_uart_avalon_jtag_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |mse_demo|base_system:inst|vga_dma:vga_dma|vga_controller:vga|vertical_state_machine
+Name vertical_state_machine.VACTIVE vertical_state_machine.VBACK vertical_state_machine.VSYN vertical_state_machine.VFRONT 
+vertical_state_machine.VFRONT 0 0 0 0 
+vertical_state_machine.VSYN 0 0 1 1 
+vertical_state_machine.VBACK 0 1 0 1 
+vertical_state_machine.VACTIVE 1 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|vga_dma:vga_dma|vga_controller:vga|horizontal_state_machine
+Name horizontal_state_machine.HACTIVE horizontal_state_machine.HBACK horizontal_state_machine.HSYN horizontal_state_machine.HFRONT 
+horizontal_state_machine.HFRONT 0 0 0 0 
+horizontal_state_machine.HSYN 0 0 1 1 
+horizontal_state_machine.HBACK 0 1 0 1 
+horizontal_state_machine.HACTIVE 1 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|base_system_sdram_ctrl:sdram_ctrl|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|base_system_sdram_ctrl:sdram_ctrl|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|base_system_sdram_ctrl:sdram_ctrl|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|base_system_sdram_ctrl:sdram_ctrl|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|lcd_dma:lcd_ctrl|s_current_state
+Name s_current_state.RELEASE s_current_state.WAITREAD s_current_state.INITREAD s_current_state.WAITBUSY s_current_state.IDLE 
+s_current_state.IDLE 0 0 0 0 0 
+s_current_state.WAITBUSY 0 0 0 1 1 
+s_current_state.INITREAD 0 0 1 0 1 
+s_current_state.WAITREAD 0 1 0 0 1 
+s_current_state.RELEASE 1 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|lcd_dma:lcd_ctrl|pixel_formatter:formatter|s_current_state
+Name s_current_state.WAITGRAY4 s_current_state.SENDGRAY4 s_current_state.WAITGRAY3 s_current_state.SENDGRAY3 s_current_state.WAITGRAY2 s_current_state.SENDGRAY2 s_current_state.WAITGRAY1 s_current_state.SENDGRAY1 s_current_state.GENIRQ s_current_state.WAITDMABUSY s_current_state.STARTDMATRANS s_current_state.CHECKBUSY s_current_state.POP s_current_state.WAITSHORT2 s_current_state.SENDSHORT2 s_current_state.WAITSHORT1 s_current_state.SENDSHORT1 s_current_state.WAITEMPTY s_current_state.WAITCOMMAND s_current_state.SENDCOMMAND s_current_state.WAITLCDBUSY s_current_state.IDLE 
+s_current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+s_current_state.WAITLCDBUSY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+s_current_state.SENDCOMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+s_current_state.WAITCOMMAND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+s_current_state.WAITEMPTY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+s_current_state.SENDSHORT1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+s_current_state.WAITSHORT1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+s_current_state.SENDSHORT2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+s_current_state.WAITSHORT2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+s_current_state.POP 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+s_current_state.CHECKBUSY 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+s_current_state.STARTDMATRANS 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WAITDMABUSY 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.GENIRQ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.SENDGRAY1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WAITGRAY1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.SENDGRAY2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WAITGRAY2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.SENDGRAY3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WAITGRAY3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.SENDGRAY4 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WAITGRAY4 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|lcd_dma:lcd_ctrl|SendReceiveInterface:interface|s_current_state
+Name s_current_state.READHI4 s_current_state.READHI3 s_current_state.READHI2 s_current_state.READHI1 s_current_state.READCLOCK s_current_state.WAITREADLOW s_current_state.INITREAD s_current_state.WRITELOW2 s_current_state.WRITELOW1 s_current_state.CLOCKDATAOUT s_current_state.IDLE 
+s_current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+s_current_state.CLOCKDATAOUT 0 0 0 0 0 0 0 0 0 1 1 
+s_current_state.WRITELOW1 0 0 0 0 0 0 0 0 1 0 1 
+s_current_state.WRITELOW2 0 0 0 0 0 0 0 1 0 0 1 
+s_current_state.INITREAD 0 0 0 0 0 0 1 0 0 0 1 
+s_current_state.WAITREADLOW 0 0 0 0 0 1 0 0 0 0 1 
+s_current_state.READCLOCK 0 0 0 0 1 0 0 0 0 0 1 
+s_current_state.READHI1 0 0 0 1 0 0 0 0 0 0 1 
+s_current_state.READHI2 0 0 1 0 0 0 0 0 0 0 1 
+s_current_state.READHI3 0 1 0 0 0 0 0 0 0 0 1 
+s_current_state.READHI4 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|lcd_dma:lcd_ctrl|SendReceiveInterface:interface|s_current_reset
+Name s_current_reset.WAITRECOVER s_current_reset.ACTIVATERECOVER s_current_reset.WAITRESET s_current_reset.NOOP s_current_reset.ACTIVATERESET 
+s_current_reset.ACTIVATERESET 0 0 0 0 0 
+s_current_reset.NOOP 0 0 0 1 1 
+s_current_reset.WAITRESET 0 0 1 0 1 
+s_current_reset.ACTIVATERECOVER 0 1 0 0 1 
+s_current_reset.WAITRECOVER 1 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|i2c_core:i2c_ctrl|i2c_cntrl:core|s_current_state
+Name s_current_state.WSSCND s_current_state.SSCND s_current_state.WDAT3 s_current_state.DAT3 s_current_state.WDAT2 s_current_state.DAT2 s_current_state.WDAT1 s_current_state.DAT1 s_current_state.WDAT s_current_state.DAT s_current_state.WADR1 s_current_state.ADR1 s_current_state.WADR s_current_state.ADR s_current_state.WDID s_current_state.DID s_current_state.WSCND s_current_state.SCND s_current_state.IDLE 
+s_current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+s_current_state.SCND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+s_current_state.WSCND 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+s_current_state.DID 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+s_current_state.WDID 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+s_current_state.ADR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+s_current_state.WADR 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+s_current_state.ADR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+s_current_state.WADR1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+s_current_state.DAT 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+s_current_state.WDAT 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+s_current_state.DAT1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WDAT1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.DAT2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WDAT2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.DAT3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WDAT3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.SSCND 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+s_current_state.WSSCND 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|i2c_core:i2c_ctrl|i2c_cntrl:core|i2c_start_stop:start_stop_gen|s_current_state
+Name s_current_state.STOP6 s_current_state.STOP5 s_current_state.STOP4 s_current_state.STOP3 s_current_state.STOP2 s_current_state.STOP1 s_current_state.ACTIVE s_current_state.START4 s_current_state.START3 s_current_state.START2 s_current_state.START1 s_current_state.IDLE 
+s_current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+s_current_state.START1 0 0 0 0 0 0 0 0 0 0 1 1 
+s_current_state.START2 0 0 0 0 0 0 0 0 0 1 0 1 
+s_current_state.START3 0 0 0 0 0 0 0 0 1 0 0 1 
+s_current_state.START4 0 0 0 0 0 0 0 1 0 0 0 1 
+s_current_state.ACTIVE 0 0 0 0 0 0 1 0 0 0 0 1 
+s_current_state.STOP1 0 0 0 0 0 1 0 0 0 0 0 1 
+s_current_state.STOP2 0 0 0 0 1 0 0 0 0 0 0 1 
+s_current_state.STOP3 0 0 0 1 0 0 0 0 0 0 0 1 
+s_current_state.STOP4 0 0 1 0 0 0 0 0 0 0 0 1 
+s_current_state.STOP5 0 1 0 0 0 0 0 0 0 0 0 1 
+s_current_state.STOP6 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|i2c_core:i2c_ctrl|i2c_autodetect:autodetection|s_current_state
+Name s_current_state.NEXT_DID s_current_state.UPDATE s_current_state.WAIT_I2C s_current_state.START_I2C s_current_state.IDLE 
+s_current_state.IDLE 0 0 0 0 0 
+s_current_state.START_I2C 0 0 0 1 1 
+s_current_state.WAIT_I2C 0 0 1 0 1 
+s_current_state.UPDATE 0 1 0 0 1 
+s_current_state.NEXT_DID 1 0 0 0 1 
+
+State Machine - |mse_demo|base_system:inst|cam_dma:cam_ctrl|cam_dma_ctrl:dma|s_avalon_current_state
+Name s_avalon_current_state.BURST s_avalon_current_state.INITBURST s_avalon_current_state.NOOP 
+s_avalon_current_state.NOOP 0 0 0 
+s_avalon_current_state.INITBURST 0 1 1 
+s_avalon_current_state.BURST 1 0 1 
+
+State Machine - |mse_demo|base_system:inst|cam_dma:cam_ctrl|cam_dma_ctrl:dma|s_dma_current_state
+Name s_dma_current_state.STREAM s_dma_current_state.WAITIMAGE s_dma_current_state.IDLE 
+s_dma_current_state.IDLE 0 0 0 
+s_dma_current_state.WAITIMAGE 0 1 1 
+s_dma_current_state.STREAM 1 0 1 
+
+State Machine - |mse_demo|base_system:inst|base_system_CPU:cpu|base_system_CPU_cpu:cpu|base_system_CPU_cpu_nios2_oci:the_base_system_CPU_cpu_nios2_oci|base_system_CPU_cpu_debug_slave_wrapper:the_base_system_CPU_cpu_debug_slave_wrapper|base_system_CPU_cpu_debug_slave_tck:the_base_system_CPU_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

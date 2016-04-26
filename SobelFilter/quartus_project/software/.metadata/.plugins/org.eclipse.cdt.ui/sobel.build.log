@@ -1,0 +1,9 @@
+14:48:35 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building ../sobel_bsp/
+make --no-print-directory -C ../sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+
+14:48:35 Build Finished (took 166ms)
+

@@ -2,4 +2,5 @@
 /labProject/db
 /labProject/incremental_db
 /labProject/output_files/{*.rpt, *.done, *.smsg, *.summary, *.jdi, *.pin, *.sld}
+/eclipseWorkspace/.metadata/
 

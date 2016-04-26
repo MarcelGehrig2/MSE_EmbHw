@@ -1,0 +1,429 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SDRAM_CAS_n",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_CS_n",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_RAS_n",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_WE_n",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_RESETn",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_WRn",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_RDn",
+					"strict" : false
+				},
+				{
+					"name" : "IM0",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_D_Cn",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_CSn",
+					"strict" : false
+				},
+				{
+					"name" : "SCL_CAM",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_PWRDWN",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_RSTB",
+					"strict" : false
+				},
+				{
+					"name" : "HSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "VSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "BLUE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "BLUE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "BLUE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "BLUE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "BLUE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GREEN[9]",
+					"strict" : false
+				},
+				{
+					"name" : "GREEN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "GREEN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "GREEN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GREEN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GREEN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_AD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_BA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_BA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDATA_CAM",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LCD_DATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "50MHzClk",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_PCLK",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_HSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[9]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[8]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DIPSW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CAM_VSYNC",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

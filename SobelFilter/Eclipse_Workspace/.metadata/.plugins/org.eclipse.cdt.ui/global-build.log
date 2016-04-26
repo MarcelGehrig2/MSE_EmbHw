@@ -1,0 +1,41 @@
+15:54:04 **** Build of configuration Nios II for project sobel ****
+make all 
+Info: Building ../sobel_bsp/
+make --no-print-directory -C ../sobel_bsp/
+[BSP build complete]
+Info: Compiling src/camera.c to obj/default/src/camera.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/camera.o src/camera.c
+Info: Compiling src/dipswitch.c to obj/default/src/dipswitch.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/dipswitch.o src/dipswitch.c
+Info: Compiling src/grayscale.c to obj/default/src/grayscale.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/grayscale.o src/grayscale.c
+Info: Compiling src/i2c.c to obj/default/src/i2c.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/i2c.o src/i2c.c
+Info: Compiling src/lcd_simple.c to obj/default/src/lcd_simple.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/lcd_simple.o src/lcd_simple.c
+Info: Compiling src/main.c to obj/default/src/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/main.o src/main.c
+Info: Compiling src/sobel.c to obj/default/src/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/sobel.o src/sobel.c
+Info: Compiling src/vga.c to obj/default/src/vga.o
+nios2-elf-gcc -xc -MP -MMD -c -I../sobel_bsp//HAL/inc -I../sobel_bsp/ -I../sobel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/src/vga.o src/vga.c
+Info: Linking sobel.elf
+nios2-elf-g++  -T'../sobel_bsp//linker.x' -msys-crt0='../sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o sobel.elf obj/default/src/camera.o obj/default/src/dipswitch.o obj/default/src/grayscale.o obj/default/src/i2c.o obj/default/src/lcd_simple.o obj/default/src/main.o obj/default/src/sobel.o obj/default/src/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1460554680 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project" --jdi /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/software/sobel_bsp/../../mse_demo.jdi --sopcinfo /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/software/sobel_bsp/../../base_system.sopcinfo
+Info: (sobel.elf) 76 KBytes program size (code + initialized data).
+Info:             16301 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+15:58:07 **** Build of configuration Nios II for project sobel ****
+make all 
+Info: Building ../sobel_bsp/
+make --no-print-directory -C ../sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+15:58:08 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building ../sobel_bsp/
+make --no-print-directory -C ../sobel_bsp/
+[BSP build complete]
+[sobel build complete]

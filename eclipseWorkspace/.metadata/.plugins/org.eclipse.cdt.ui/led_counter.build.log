@@ -1,9 +1,0 @@
-17:15:44 **** Incremental Build of configuration Nios II for project led_counter ****
-make all 
-Info: Building ../led_counter_bsp/
-make --no-print-directory -C ../led_counter_bsp/
-[BSP build complete]
-[led_counter build complete]
-
-17:15:44 Build Finished (took 136ms)
-
