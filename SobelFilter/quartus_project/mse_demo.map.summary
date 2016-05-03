@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Apr 13 15:39:33 2016
+Analysis & Synthesis Status : Successful - Wed Apr 27 16:00:03 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : mse_demo
 Top-level Entity Name : mse_demo
 Family : Cyclone IV E
-Total logic elements : 10,359
-    Total combinational functions : 8,498
+Total logic elements : 10,368
+    Total combinational functions : 8,507
     Dedicated logic registers : 5,834
 Total registers : 5834
 Total pins : 121

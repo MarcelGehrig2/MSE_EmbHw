@@ -1,0 +1,4 @@
+quartus_project/incremental_db/*
+quartus_project/db/*
+*.o
+Eclipse_Workspace/.metadata/*
