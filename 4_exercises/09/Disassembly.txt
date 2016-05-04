@@ -1,0 +1,194 @@
+......... ...
+00000218:   ldw r6,-8(fp)
+0000021c:   callr r2
+00000220:   br 0x22c <alt_instruction_exception_entry+96>
+00000224:   break 0
+00000228:   mov r2,zero
+0000022c:   mov sp,fp
+00000230:   ldw ra,4(sp)
+00000234:   ldw fp,0(sp)
+00000238:   addi sp,sp,8
+0000023c:   ret 
+          _start:
+00000240:   movui r2,4096
+00000244:   initd 0(r2)
+00000248:   addi r2,r2,-32
+0000024c:   blt zero,r2,0x244 <_start+4>
+00000250:   movhi sp,256
+00000254:   ori sp,sp,0
+00000258:   movhi gp,0
+0000025c:   ori gp,gp,49136
+00000260:   movhi r2,0
+00000264:   ori r2,r2,22132
+00000268:   movhi r3,0
+0000026c:   ori r3,r3,22428
+00000270:   beq r2,r3,0x280 <_start+64>
+00000274:   stw zero,0(r2)
+00000278:   addi r2,r2,4
+0000027c:   bltu r2,r3,0x274 <_start+52>
+00000280:   call 0x628 <alt_load>
+00000284:   call 0x6a8 <alt_main>
+00000288:   br 0x288 <_start+72>
+          main:
+0000028c:   addi sp,sp,-56
+00000290:   stw fp,52(sp)
+00000294:   stw r20,48(sp)
+00000298:   stw r19,44(sp)
+0000029c:   stw r18,40(sp)
+000002a0:   stw r17,36(sp)
+000002a4:   stw r16,32(sp)
+000002a8:   addi fp,sp,52
+000002ac:   mov r18,sp
+000002b0:   mov r20,r18
+18        	int N = 5;
+000002b4:   movi r18,5
+000002b8:   stw r18,-48(fp)
+19        	int trace = 0;
+000002bc:   stw zero,-44(fp)
+20        	trace ++;
+000002c0:   ldw r18,-44(fp)
+000002c4:   addi r18,r18,1
+000002c8:   stw r18,-44(fp)
+21        	trace ++;
+000002cc:   ldw r18,-44(fp)
+000002d0:   addi r18,r18,1
+000002d4:   stw r18,-44(fp)
+22        	trace ++;
+000002d8:   ldw r18,-44(fp)
+000002dc:   addi r18,r18,1
+000002e0:   stw r18,-44(fp)
+23        	trace ++;
+000002e4:   ldw r18,-44(fp)
+000002e8:   addi r18,r18,1
+000002ec:   stw r18,-44(fp)
+27        	int i, w, x[N], y[N];
+000002f0:   ldw r18,-48(fp)
+000002f4:   addi r19,r18,-1
+000002f8:   stw r19,-40(fp)
+000002fc:   mov r19,r18
+00000300:   mov r16,r19
+00000304:   mov r17,zero
+00000308:   srli r19,r16,27
+0000030c:   slli r9,r17,5
+00000310:   or r9,r19,r9
+00000314:   slli r8,r16,5
+00000318:   mov r8,r18
+0000031c:   mov r14,r8
+00000320:   mov r15,zero
+00000324:   srli r8,r14,27
+00000328:   slli r7,r15,5
+0000032c:   or r7,r8,r7
+00000330:   slli r6,r14,5
+00000334:   mov r6,r18
+00000338:   add r6,r6,r6
+0000033c:   add r6,r6,r6
+00000340:   addi r6,r6,3
+00000344:   addi r6,r6,3
+00000348:   srli r6,r6,2
+0000034c:   add r6,r6,r6
+00000350:   add r6,r6,r6
+00000354:   sub sp,sp,r6
+00000358:   mov r6,sp
+0000035c:   addi r6,r6,3
+00000360:   srli r6,r6,2
+00000364:   add r6,r6,r6
+00000368:   add r6,r6,r6
+0000036c:   stw r6,-36(fp)
+00000370:   ldw r6,-48(fp)
+00000374:   addi r7,r6,-1
+00000378:   stw r7,-32(fp)
+0000037c:   mov r7,r6
+00000380:   mov r12,r7
+00000384:   mov r13,zero
+00000388:   srli r7,r12,27
+0000038c:   slli r5,r13,5
+00000390:   or r5,r7,r5
+00000394:   slli r4,r12,5
+00000398:   mov r4,r6
+0000039c:   mov r10,r4
+000003a0:   mov r11,zero
+000003a4:   srli r4,r10,27
+000003a8:   slli r3,r11,5
+000003ac:   or r3,r4,r3
+000003b0:   slli r2,r10,5
+000003b4:   mov r2,r6
+000003b8:   add r2,r2,r2
+000003bc:   add r2,r2,r2
+000003c0:   addi r2,r2,3
+000003c4:   addi r2,r2,3
+000003c8:   srli r2,r2,2
+000003cc:   add r2,r2,r2
+000003d0:   add r2,r2,r2
+000003d4:   sub sp,sp,r2
+000003d8:   mov r2,sp
+000003dc:   addi r2,r2,3
+000003e0:   srli r2,r2,2
+000003e4:   add r2,r2,r2
+000003e8:   add r2,r2,r2
+000003ec:   stw r2,-28(fp)
+28         	for (i = 0; i < N; i++) {
+000003f0:   stw zero,-52(fp)
+000003f4:   br 0x470 <main+484>
+29        		x[i] = x[i] + y[i];
+000003f8:   ldw r3,-36(fp)
+000003fc:   ldw r2,-52(fp)
+00000400:   add r2,r2,r2
+00000404:   add r2,r2,r2
+00000408:   add r2,r3,r2
+0000040c:   ldw r3,0(r2)
+00000410:   ldw r4,-28(fp)
+00000414:   ldw r2,-52(fp)
+00000418:   add r2,r2,r2
+0000041c:   add r2,r2,r2
+00000420:   add r2,r4,r2
+00000424:   ldw r2,0(r2)
+00000428:   add r3,r3,r2
+0000042c:   ldw r4,-36(fp)
+00000430:   ldw r2,-52(fp)
+00000434:   add r2,r2,r2
+00000438:   add r2,r2,r2
+0000043c:   add r2,r4,r2
+00000440:   stw r3,0(r2)
+30        		if (w)
+00000444:   ldw r2,-24(fp)
+00000448:   beq r2,zero,0x464 <main+472>
+31        			y[i] = 0;
+0000044c:   ldw r3,-28(fp)
+00000450:   ldw r2,-52(fp)
+00000454:   add r2,r2,r2
+00000458:   add r2,r2,r2
+0000045c:   add r2,r3,r2
+00000460:   stw zero,0(r2)
+28         	for (i = 0; i < N; i++) {
+00000464:   ldw r2,-52(fp)
+00000468:   addi r2,r2,1
+0000046c:   stw r2,-52(fp)
+00000470:   ldw r3,-52(fp)
+00000474:   ldw r2,-48(fp)
+00000478:   blt r3,r2,0x3f8 <main+364>
+34         	trace++;
+0000047c:   ldw r2,-44(fp)
+00000480:   addi r2,r2,1
+00000484:   stw r2,-44(fp)
+35         	trace++;
+00000488:   ldw r2,-44(fp)
+0000048c:   addi r2,r2,1
+00000490:   stw r2,-44(fp)
+38        	if (w) {
+00000494:   ldw r2,-24(fp)
+00000498:   beq r2,zero,0x524 <main+664>
+39        		for (i = 0; i < N; i++) {
+0000049c:   stw zero,-52(fp)
+000004a0:   br 0x514 <main+648>
+40        			x[i] = x[i] + y[i];
+000004a4:   ldw r3,-36(fp)
+000004a8:   ldw r2,-52(fp)
+000004ac:   add r2,r2,r2
+000004b0:   add r2,r2,r2
+000004b4:   add r2,r3,r2
+000004b8:   ldw r3,0(r2)
+000004bc:   ldw r4,-28(fp)
+000004c0:   ldw r2,-52(fp)
+000004c4:   add r2,r2,r2
+......... ...
+
