@@ -1,0 +1,159 @@
+          main:
+0000028c:   addi sp,sp,-16028
+00000290:   stw ra,16024(sp)
+00000294:   stw fp,16020(sp)
+00000298:   addi fp,sp,16020
+49          printf("Hello from Nios II!\n");
+0000029c:   movhi r4,0
+000002a0:   addi r4,r4,22976
+000002a4:   call 0x558 <puts>
+53          trace++;
+000002a8:   ldw r2,-16012(fp)
+000002ac:   addi r2,r2,1
+000002b0:   stw r2,-16012(fp)
+54          trace++;
+000002b4:   ldw r2,-16012(fp)
+000002b8:   addi r2,r2,1
+000002bc:   stw r2,-16012(fp)
+55          trace++;
+000002c0:   ldw r2,-16012(fp)
+000002c4:   addi r2,r2,1
+000002c8:   stw r2,-16012(fp)
+61          for (i = 0; i < 1000; i++) {
+000002cc:   stw zero,-16020(fp)
+000002d0:   br 0x35c <main+208>
+62        	  x[i] = x[i] + y[i];
+000002d4:   ldw r2,-16020(fp)
+000002d8:   add r2,r2,r2
+000002dc:   add r2,r2,r2
+000002e0:   addi r3,fp,-16020
+000002e4:   add r2,r3,r2
+000002e8:   addi r2,r2,20
+000002ec:   ldw r3,0(r2)
+000002f0:   ldw r2,-16020(fp)
+000002f4:   add r2,r2,r2
+000002f8:   add r2,r2,r2
+000002fc:   addi r4,fp,-16020
+00000300:   add r2,r4,r2
+00000304:   addi r2,r2,4020
+00000308:   ldw r2,0(r2)
+0000030c:   add r3,r3,r2
+00000310:   ldw r2,-16020(fp)
+00000314:   add r2,r2,r2
+00000318:   add r2,r2,r2
+0000031c:   addi r4,fp,-16020
+00000320:   add r2,r4,r2
+00000324:   addi r2,r2,20
+00000328:   stw r3,0(r2)
+63        	  if (w)
+0000032c:   ldw r2,-16008(fp)
+00000330:   beq r2,zero,0x350 <main+196>
+64        		  y[i] = 0;
+00000334:   ldw r2,-16020(fp)
+00000338:   add r2,r2,r2
+0000033c:   add r2,r2,r2
+00000340:   addi r3,fp,-16020
+00000344:   add r2,r3,r2
+00000348:   addi r2,r2,4020
+0000034c:   stw zero,0(r2)
+61          for (i = 0; i < 1000; i++) {
+00000350:   ldw r2,-16020(fp)
+00000354:   addi r2,r2,1
+00000358:   stw r2,-16020(fp)
+0000035c:   ldw r2,-16020(fp)
+00000360:   cmplti r2,r2,1000
+00000364:   bne r2,zero,0x2d4 <main+72>
+69          trace++;
+00000368:   ldw r2,-16012(fp)
+0000036c:   addi r2,r2,1
+00000370:   stw r2,-16012(fp)
+70          trace++;
+00000374:   ldw r2,-16012(fp)
+00000378:   addi r2,r2,1
+0000037c:   stw r2,-16012(fp)
+75          if (w2) {
+00000380:   ldw r2,-16004(fp)
+00000384:   beq r2,zero,0x420 <main+404>
+76        	  for (i2 = 0; i2 < 1000; i2++) {
+00000388:   stw zero,-16016(fp)
+0000038c:   br 0x410 <main+388>
+77        		  x2[i2] = x2[i2] + y2[i2];
+00000390:   ldw r2,-16016(fp)
+00000394:   add r2,r2,r2
+00000398:   add r2,r2,r2
+0000039c:   addi r4,fp,-16020
+000003a0:   add r2,r4,r2
+000003a4:   addi r2,r2,8020
+000003a8:   ldw r3,0(r2)
+000003ac:   ldw r2,-16016(fp)
+000003b0:   add r2,r2,r2
+000003b4:   add r2,r2,r2
+000003b8:   addi r4,fp,-16020
+000003bc:   add r2,r4,r2
+000003c0:   addi r2,r2,12020
+000003c4:   ldw r2,0(r2)
+000003c8:   add r3,r3,r2
+000003cc:   ldw r2,-16016(fp)
+000003d0:   add r2,r2,r2
+000003d4:   add r2,r2,r2
+000003d8:   addi r4,fp,-16020
+000003dc:   add r2,r4,r2
+000003e0:   addi r2,r2,8020
+000003e4:   stw r3,0(r2)
+78        		  y2[i2] = 0;
+000003e8:   ldw r2,-16016(fp)
+000003ec:   add r2,r2,r2
+000003f0:   add r2,r2,r2
+000003f4:   addi r3,fp,-16020
+000003f8:   add r2,r3,r2
+000003fc:   addi r2,r2,12020
+00000400:   stw zero,0(r2)
+76        	  for (i2 = 0; i2 < 1000; i2++) {
+00000404:   ldw r2,-16016(fp)
+00000408:   addi r2,r2,1
+0000040c:   stw r2,-16016(fp)
+00000410:   ldw r2,-16016(fp)
+00000414:   cmplti r2,r2,1000
+00000418:   bne r2,zero,0x390 <main+260>
+0000041c:   br 0x498 <main+524>
+81        	  for (i2 = 0; i2 < 1000; i2++) {
+00000420:   stw zero,-16016(fp)
+00000424:   br 0x48c <main+512>
+82        		  x2[i2] = x2[i2] + y2[i2];
+00000428:   ldw r2,-16016(fp)
+0000042c:   add r2,r2,r2
+00000430:   add r2,r2,r2
+00000434:   addi r4,fp,-16020
+00000438:   add r2,r4,r2
+0000043c:   addi r2,r2,8020
+00000440:   ldw r3,0(r2)
+00000444:   ldw r2,-16016(fp)
+00000448:   add r2,r2,r2
+0000044c:   add r2,r2,r2
+00000450:   addi r4,fp,-16020
+00000454:   add r2,r4,r2
+00000458:   addi r2,r2,12020
+0000045c:   ldw r2,0(r2)
+00000460:   add r3,r3,r2
+00000464:   ldw r2,-16016(fp)
+00000468:   add r2,r2,r2
+0000046c:   add r2,r2,r2
+00000470:   addi r4,fp,-16020
+00000474:   add r2,r4,r2
+00000478:   addi r2,r2,8020
+0000047c:   stw r3,0(r2)
+81        	  for (i2 = 0; i2 < 1000; i2++) {
+00000480:   ldw r2,-16016(fp)
+00000484:   addi r2,r2,1
+00000488:   stw r2,-16016(fp)
+0000048c:   ldw r2,-16016(fp)
+00000490:   cmplti r2,r2,1000
+00000494:   bne r2,zero,0x428 <main+412>
+87          return 0;
+00000498:   mov r2,zero
+88        }
+0000049c:   mov sp,fp
+000004a0:   ldw ra,4(sp)
+000004a4:   ldw fp,0(sp)
+000004a8:   addi sp,sp,8
+000004ac:   ret 

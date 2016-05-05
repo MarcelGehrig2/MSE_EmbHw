@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 27, 2016 4:12:30 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1461766350442</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 5, 2016 9:20:58 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1462432858942</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/software/sobel_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../base_system.sopcinfo</SopcDesignFile>

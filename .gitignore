@@ -4,3 +4,12 @@
 /labProject/output_files/{*.rpt, *.done, *.smsg, *.summary, *.jdi, *.pin, *.sld}
 .metadata
 
+
+
+# C-Projects build data
+*.elf
+**.map
+*.objdump
+*.o
+
+
