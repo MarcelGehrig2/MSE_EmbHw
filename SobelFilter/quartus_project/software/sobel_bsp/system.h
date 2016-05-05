@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'base_system'
  * SOPC Builder design path: ../../base_system.sopcinfo
  *
- * Generated: Wed Apr 27 16:12:30 CEST 2016
+ * Generated: Thu May 05 12:28:58 CEST 2016
  */
 
 /*
@@ -143,6 +143,7 @@
 
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
+#define __ALTERA_AVALON_PERFORMANCE_COUNTER
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
@@ -160,7 +161,7 @@
  */
 
 #define ALT_MODULE_CLASS_PLL altpll
-#define PLL_BASE 0x10010b0
+#define PLL_BASE 0x1001130
 #define PLL_IRQ -1
 #define PLL_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PLL_NAME "/dev/PLL"
@@ -175,7 +176,7 @@
 
 #define ALT_MODULE_CLASS_ProfileTimer altera_avalon_timer
 #define PROFILETIMER_ALWAYS_RUN 0
-#define PROFILETIMER_BASE 0x1001040
+#define PROFILETIMER_BASE 0x10010c0
 #define PROFILETIMER_COUNTER_SIZE 32
 #define PROFILETIMER_FIXED_PERIOD 0
 #define PROFILETIMER_FREQ 50000000
@@ -210,19 +211,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x10010e0
+#define ALT_STDERR_BASE 0x1001160
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x10010e0
+#define ALT_STDIN_BASE 0x1001160
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x10010e0
+#define ALT_STDOUT_BASE 0x1001160
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -237,7 +238,7 @@
 
 #define ALT_MODULE_CLASS_Systimer altera_avalon_timer
 #define SYSTIMER_ALWAYS_RUN 0
-#define SYSTIMER_BASE 0x1001060
+#define SYSTIMER_BASE 0x10010e0
 #define SYSTIMER_COUNTER_SIZE 32
 #define SYSTIMER_FIXED_PERIOD 0
 #define SYSTIMER_FREQ 50000000
@@ -262,8 +263,8 @@
  */
 
 #define ALT_MODULE_CLASS_cam_ctrl cam_dma
-#define CAM_CTRL_BASE 0x1001000
-#define CAM_CTRL_IRQ 3
+#define CAM_CTRL_BASE 0x1001080
+#define CAM_CTRL_IRQ 0
 #define CAM_CTRL_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define CAM_CTRL_NAME "/dev/cam_ctrl"
 #define CAM_CTRL_SPAN 32
@@ -276,7 +277,7 @@
  */
 
 #define ALT_MODULE_CLASS_dipsw altera_avalon_pio
-#define DIPSW_BASE 0x10010a0
+#define DIPSW_BASE 0x1001120
 #define DIPSW_BIT_CLEARING_EDGE_REGISTER 0
 #define DIPSW_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define DIPSW_CAPTURE 0
@@ -314,8 +315,8 @@
  */
 
 #define ALT_MODULE_CLASS_i2c_ctrl i2c_master
-#define I2C_CTRL_BASE 0x1001090
-#define I2C_CTRL_IRQ 2
+#define I2C_CTRL_BASE 0x1001110
+#define I2C_CTRL_IRQ 3
 #define I2C_CTRL_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define I2C_CTRL_NAME "/dev/i2c_ctrl"
 #define I2C_CTRL_SPAN 16
@@ -328,8 +329,8 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x10010e0
-#define JTAG_UART_IRQ 0
+#define JTAG_UART_BASE 0x1001160
+#define JTAG_UART_IRQ 1
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
 #define JTAG_UART_READ_DEPTH 64
@@ -346,12 +347,27 @@
  */
 
 #define ALT_MODULE_CLASS_lcd_ctrl lcd_dma
-#define LCD_CTRL_BASE 0x1001020
-#define LCD_CTRL_IRQ 1
+#define LCD_CTRL_BASE 0x10010a0
+#define LCD_CTRL_IRQ 2
 #define LCD_CTRL_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define LCD_CTRL_NAME "/dev/lcd_ctrl"
 #define LCD_CTRL_SPAN 32
 #define LCD_CTRL_TYPE "lcd_dma"
+
+
+/*
+ * performance_counter_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_performance_counter_0 altera_avalon_performance_counter
+#define PERFORMANCE_COUNTER_0_BASE 0x1001000
+#define PERFORMANCE_COUNTER_0_HOW_MANY_SECTIONS 7
+#define PERFORMANCE_COUNTER_0_IRQ -1
+#define PERFORMANCE_COUNTER_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PERFORMANCE_COUNTER_0_NAME "/dev/performance_counter_0"
+#define PERFORMANCE_COUNTER_0_SPAN 128
+#define PERFORMANCE_COUNTER_0_TYPE "altera_avalon_performance_counter"
 
 
 /*
@@ -399,13 +415,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x10010d8
+#define SYSID_BASE 0x1001158
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1461765499
+#define SYSID_TIMESTAMP 1462443778
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -415,7 +431,7 @@
  */
 
 #define ALT_MODULE_CLASS_vga_dma vga_dma
-#define VGA_DMA_BASE 0x10010d0
+#define VGA_DMA_BASE 0x1001150
 #define VGA_DMA_IRQ -1
 #define VGA_DMA_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define VGA_DMA_NAME "/dev/vga_dma"

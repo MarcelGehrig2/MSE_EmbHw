@@ -43,46 +43,70 @@
 #include <stdlib.h>
 #include <io.h>
 
+#include "altera_avalon_performance_counter.h"
+
+
+#define PERFORMANCE_COUNTER_0_BASE 0x1001000
+
 int main(void)
 {
+  printf("Hello from Nios II! 2\n");
 
-  printf("Hello from Nios II!\n");
+  int glob_i;
+  for (glob_i = 0; glob_i < 10; glob_i++) {
 
-
-  int trace;
-  trace++;
-  trace++;
-  trace++;
-
+	  // Reset the counters before every run
+	  PERF_RESET (PERFORMANCE_COUNTER_0_BASE);
 
 
-  // original (slow)
-  int i, w, x[1000], y[1000];
-  for (i = 0; i < 1000; i++) {
-	  x[i] = x[i] + y[i];
-	  if (w)
-		  y[i] = 0;
-  }
+	  int trace;
+	  trace++;
+	  PERF_START_MEASURING (PERFORMANCE_COUNTER_0_BASE);
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  trace++;
+	  PERF_STOP_MEASURING (PERFORMANCE_COUNTER_0_BASE);
 
 
 
-  trace++;
-  trace++;
-
-
-  // unswitched (faster)
-  int i2, w2, x2[1000], y2[1000];
-  if (w2) {
-	  for (i2 = 0; i2 < 1000; i2++) {
-		  x2[i2] = x2[i2] + y2[i2];
-		  y2[i2] = 0;
+	  // original (slow)
+	  int i, w, x[1000], y[1000];
+	  for (i = 0; i < 1000; i++) {
+		  x[i] = x[i] + y[i];
+		  if (w)
+			  y[i] = 0;
 	  }
-  } else {
-	  for (i2 = 0; i2 < 1000; i2++) {
-		  x2[i2] = x2[i2] + y2[i2];
+
+
+
+	  trace++;
+	  trace++;
+
+
+	  // unswitched (faster)
+	  int i2, w2, x2[1000], y2[1000];
+	  if (w2) {
+		  for (i2 = 0; i2 < 1000; i2++) {
+			  x2[i2] = x2[i2] + y2[i2];
+			  y2[i2] = 0;
+		  }
+	  } else {
+		  for (i2 = 0; i2 < 1000; i2++) {
+			  x2[i2] = x2[i2] + y2[i2];
+		  }
 	  }
+
+
+	  // Performance test result
+	  printf("Global counter\t:%d\n", perf_get_total_time(PERFORMANCE_COUNTER_0_BASE));
+
   }
-
-
   return 0;
 }

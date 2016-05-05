@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 5, 2016 9:20:58 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1462432858942</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 5, 2016 12:29:24 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1462444164072</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/software/sobel_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../base_system.sopcinfo</SopcDesignFile>
@@ -893,62 +893,68 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>performance_counter_0</slaveDescriptor>
+                <addressRange>0x01001000 - 0x0100107F</addressRange>
+                <addressSpan>128</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>cam_ctrl</slaveDescriptor>
-                <addressRange>0x01001000 - 0x0100101F</addressRange>
+                <addressRange>0x01001080 - 0x0100109F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>lcd_ctrl</slaveDescriptor>
-                <addressRange>0x01001020 - 0x0100103F</addressRange>
+                <addressRange>0x010010A0 - 0x010010BF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ProfileTimer</slaveDescriptor>
-                <addressRange>0x01001040 - 0x0100105F</addressRange>
+                <addressRange>0x010010C0 - 0x010010DF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>Systimer</slaveDescriptor>
-                <addressRange>0x01001060 - 0x0100107F</addressRange>
+                <addressRange>0x010010E0 - 0x010010FF</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>i2c_ctrl</slaveDescriptor>
-                <addressRange>0x01001090 - 0x0100109F</addressRange>
+                <addressRange>0x01001110 - 0x0100111F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>dipsw</slaveDescriptor>
-                <addressRange>0x010010A0 - 0x010010AF</addressRange>
+                <addressRange>0x01001120 - 0x0100112F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>PLL</slaveDescriptor>
-                <addressRange>0x010010B0 - 0x010010BF</addressRange>
+                <addressRange>0x01001130 - 0x0100113F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>vga_dma</slaveDescriptor>
-                <addressRange>0x010010D0 - 0x010010D7</addressRange>
+                <addressRange>0x01001150 - 0x01001157</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x010010D8 - 0x010010DF</addressRange>
+                <addressRange>0x01001158 - 0x0100115F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x010010E0 - 0x010010E7</addressRange>
+                <addressRange>0x01001160 - 0x01001167</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

@@ -1,5 +1,5 @@
 Assembler report for mse_demo
-Wed Apr 27 16:01:26 2016
+Thu May  5 12:26:52 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Apr 27 16:01:26 2016 ;
+; Assembler Status      ; Successful - Thu May  5 12:26:52 2016 ;
 ; Revision Name         ; mse_demo                              ;
 ; Top-level Entity Name ; mse_demo                              ;
 ; Family                ; Cyclone IV E                          ;
@@ -80,8 +80,8 @@ agreement for further details.
 ; Option         ; Setting                            ;
 +----------------+------------------------------------+
 ; Device         ; EP4CE30F23C7                       ;
-; JTAG usercode  ; 0x007F17D9                         ;
-; Checksum       ; 0x007F17D9                         ;
+; JTAG usercode  ; 0x008EC97A                         ;
+; Checksum       ; 0x008EC97A                         ;
 +----------------+------------------------------------+
 
 
@@ -91,16 +91,16 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Wed Apr 27 16:01:23 2016
+    Info: Processing started: Thu May  5 12:26:48 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off mse_demo -c mse_demo
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info (115017): Design contains a time-limited core -- only a single, time-limited programming file can be generated
 Warning (210042): Can't convert time-limited SOF into POF, HEX File, TTF, or RBF
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1048 megabytes
-    Info: Processing ended: Wed Apr 27 16:01:26 2016
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 1055 megabytes
+    Info: Processing ended: Thu May  5 12:26:52 2016
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

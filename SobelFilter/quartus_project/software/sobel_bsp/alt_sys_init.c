@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'base_system'
  * SOPC Builder design path: ../../base_system.sopcinfo
  *
- * Generated: Wed Apr 13 15:53:32 CEST 2016
+ * Generated: Thu May 05 12:28:58 CEST 2016
  */
 
 /*
@@ -60,6 +60,7 @@
 
 #include "altera_nios2_gen2_irq.h"
 #include "altera_avalon_jtag_uart.h"
+#include "altera_avalon_performance_counter.h"
 #include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_timer.h"
 
@@ -69,6 +70,7 @@
 
 ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( CPU, CPU);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
+ALTERA_AVALON_PERFORMANCE_COUNTER_INSTANCE ( PERFORMANCE_COUNTER_0, performance_counter_0);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( PROFILETIMER, ProfileTimer);
 ALTERA_AVALON_TIMER_INSTANCE ( SYSTIMER, Systimer);
@@ -97,5 +99,6 @@ void alt_sys_init( void )
     ALTERA_AVALON_TIMER_INIT ( PROFILETIMER, ProfileTimer);
     ALTERA_AVALON_TIMER_INIT ( SYSTIMER, Systimer);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
+    ALTERA_AVALON_PERFORMANCE_COUNTER_INIT ( PERFORMANCE_COUNTER_0, performance_counter_0);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
 }

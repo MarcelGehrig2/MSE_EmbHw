@@ -714,7 +714,7 @@ agreement for further details.
 		(pt 288 72)
 		(output)
 		(text "dac_clk_clk" (rect 0 0 116 15)(font "Arial" (font_size 8)))
-		(text "dac_clk_clk" (rect 228 61 344 76)(font "Arial" (font_size 8)))
+		(text "dac_clk_clk" (rect 73 61 189 76)(font "Arial" (font_size 8)))
 		(line (pt 288 72)(pt 176 72))
 	)
 	(port
@@ -770,7 +770,7 @@ agreement for further details.
 		(pt 288 112)
 		(output)
 		(text "mclk_clk" (rect 0 0 84 15)(font "Arial" (font_size 8)))
-		(text "mclk_clk" (rect 245 101 329 116)(font "Arial" (font_size 8)))
+		(text "mclk_clk" (rect 100 101 184 116)(font "Arial" (font_size 8)))
 		(line (pt 288 112)(pt 176 112))
 	)
 	(port
@@ -833,7 +833,7 @@ agreement for further details.
 		(pt 288 152)
 		(output)
 		(text "sdram_clk_clk" (rect 0 0 138 15)(font "Arial" (font_size 8)))
-		(text "sdram_clk_clk" (rect 216 141 354 156)(font "Arial" (font_size 8)))
+		(text "sdram_clk_clk" (rect 55 141 193 156)(font "Arial" (font_size 8)))
 		(line (pt 288 152)(pt 176 152))
 	)
 	(port

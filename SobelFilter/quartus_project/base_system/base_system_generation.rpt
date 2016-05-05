@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system.qsys --block-symbol-file --output-directory=/home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system --family="Cyclone IV E" --part=EP4CE30F23C7
+Info: qsys-generate /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system.qsys --block-symbol-file --output-directory=/home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system --family="Cyclone IV E" --part=EP4CE30F23C7
 Progress: Loading quartus_project/base_system.qsys
 Progress: Reading input file
 Progress: Adding CPU [altera_nios2_gen2 15.1]
@@ -22,6 +22,8 @@ Progress: Adding jtag_uart [altera_avalon_jtag_uart 15.1]
 Progress: Parameterizing module jtag_uart
 Progress: Adding lcd_ctrl [lcd_dma 1.0]
 Progress: Parameterizing module lcd_ctrl
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 15.1]
+Progress: Parameterizing module performance_counter_0
 Progress: Adding sdram_ctrl [altera_avalon_new_sdram_controller 15.1]
 Progress: Parameterizing module sdram_ctrl
 Progress: Adding sysid [altera_avalon_sysid_qsys 15.1]
@@ -42,7 +44,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system.qsys --synthesis=VHDL --output-directory=/home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
+Info: qsys-generate /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system.qsys --synthesis=VHDL --output-directory=/home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
 Progress: Loading quartus_project/base_system.qsys
 Progress: Reading input file
 Progress: Adding CPU [altera_nios2_gen2 15.1]
@@ -65,6 +67,8 @@ Progress: Adding jtag_uart [altera_avalon_jtag_uart 15.1]
 Progress: Parameterizing module jtag_uart
 Progress: Adding lcd_ctrl [lcd_dma 1.0]
 Progress: Parameterizing module lcd_ctrl
+Progress: Adding performance_counter_0 [altera_avalon_performance_counter 15.1]
+Progress: Parameterizing module performance_counter_0
 Progress: Adding sdram_ctrl [altera_avalon_new_sdram_controller 15.1]
 Progress: Parameterizing module sdram_ctrl
 Progress: Adding sysid [altera_avalon_sysid_qsys 15.1]
@@ -82,35 +86,39 @@ Warning: base_system.PLL: PLL.areset_conduit must be exported, or connected to a
 Warning: base_system.PLL: PLL.locked_conduit must be exported, or connected to a matching conduit.
 Warning: base_system.PLL: PLL.phasedone_conduit must be exported, or connected to a matching conduit.
 Info: base_system: Generating base_system "base_system" for QUARTUS_SYNTH
-Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
-Info: Inserting clock-crossing logic between cmd_demux_001.src3 and cmd_mux_003.sink1
-Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
-Info: Inserting clock-crossing logic between rsp_demux_003.src1 and rsp_mux_001.sink3
+Info: Inserting clock-crossing logic between cmd_demux.src4 and cmd_mux_004.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src3 and cmd_mux_004.sink1
+Info: Inserting clock-crossing logic between rsp_demux_004.src0 and rsp_mux.sink4
+Info: Inserting clock-crossing logic between rsp_demux_004.src1 and rsp_mux_001.sink3
 Info: CPU: "base_system" instantiated altera_nios2_gen2 "CPU"
 Info: PLL: "base_system" instantiated altpll "PLL"
 Info: ProfileTimer: Starting RTL generation for module 'base_system_ProfileTimer'
-Info: ProfileTimer:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64//perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64//perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=base_system_ProfileTimer --dir=/tmp/alt6904_7850329485305003602.dir/0003_ProfileTimer_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6904_7850329485305003602.dir/0003_ProfileTimer_gen//base_system_ProfileTimer_component_configuration.pl  --do_build_sim=0  ]
+Info: ProfileTimer:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64//perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64//perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=base_system_ProfileTimer --dir=/tmp/alt6926_9047885029457299957.dir/0003_ProfileTimer_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6926_9047885029457299957.dir/0003_ProfileTimer_gen//base_system_ProfileTimer_component_configuration.pl  --do_build_sim=0  ]
 Info: ProfileTimer: Done RTL generation for module 'base_system_ProfileTimer'
 Info: ProfileTimer: "base_system" instantiated altera_avalon_timer "ProfileTimer"
 Info: cam_ctrl: "base_system" instantiated cam_dma "cam_ctrl"
 Info: dipsw: Starting RTL generation for module 'base_system_dipsw'
-Info: dipsw:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=base_system_dipsw --dir=/tmp/alt6904_7850329485305003602.dir/0005_dipsw_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6904_7850329485305003602.dir/0005_dipsw_gen//base_system_dipsw_component_configuration.pl  --do_build_sim=0  ]
+Info: dipsw:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=base_system_dipsw --dir=/tmp/alt6926_9047885029457299957.dir/0005_dipsw_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6926_9047885029457299957.dir/0005_dipsw_gen//base_system_dipsw_component_configuration.pl  --do_build_sim=0  ]
 Info: dipsw: Done RTL generation for module 'base_system_dipsw'
 Info: dipsw: "base_system" instantiated altera_avalon_pio "dipsw"
 Info: i2c_ctrl: "base_system" instantiated i2c_master "i2c_ctrl"
 Info: jtag_uart: Starting RTL generation for module 'base_system_jtag_uart'
-Info: jtag_uart:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=base_system_jtag_uart --dir=/tmp/alt6904_7850329485305003602.dir/0007_jtag_uart_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6904_7850329485305003602.dir/0007_jtag_uart_gen//base_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=base_system_jtag_uart --dir=/tmp/alt6926_9047885029457299957.dir/0007_jtag_uart_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6926_9047885029457299957.dir/0007_jtag_uart_gen//base_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'base_system_jtag_uart'
 Info: jtag_uart: "base_system" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: lcd_ctrl: "base_system" instantiated lcd_dma "lcd_ctrl"
+Info: performance_counter_0: Starting RTL generation for module 'base_system_performance_counter_0'
+Info: performance_counter_0:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_performance_counter/generate_rtl.pl --name=base_system_performance_counter_0 --dir=/tmp/alt6926_9047885029457299957.dir/0009_performance_counter_0_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6926_9047885029457299957.dir/0009_performance_counter_0_gen//base_system_performance_counter_0_component_configuration.pl  --do_build_sim=0  ]
+Info: performance_counter_0: Done RTL generation for module 'base_system_performance_counter_0'
+Info: performance_counter_0: "base_system" instantiated altera_avalon_performance_counter "performance_counter_0"
 Info: sdram_ctrl: Starting RTL generation for module 'base_system_sdram_ctrl'
-Info: sdram_ctrl:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=base_system_sdram_ctrl --dir=/tmp/alt6904_7850329485305003602.dir/0009_sdram_ctrl_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6904_7850329485305003602.dir/0009_sdram_ctrl_gen//base_system_sdram_ctrl_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram_ctrl:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64/perl/bin/perl -I /opt/altera_lite/15.1/quartus/linux64/perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/common -I /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /opt/altera_lite/15.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=base_system_sdram_ctrl --dir=/tmp/alt6926_9047885029457299957.dir/0010_sdram_ctrl_gen/ --quartus_dir=/opt/altera_lite/15.1/quartus --verilog --config=/tmp/alt6926_9047885029457299957.dir/0010_sdram_ctrl_gen//base_system_sdram_ctrl_component_configuration.pl  --do_build_sim=0  ]
 Info: sdram_ctrl: Done RTL generation for module 'base_system_sdram_ctrl'
 Info: sdram_ctrl: "base_system" instantiated altera_avalon_new_sdram_controller "sdram_ctrl"
 Info: sysid: "base_system" instantiated altera_avalon_sysid_qsys "sysid"
 Info: vga_dma: "base_system" instantiated vga_dma "vga_dma"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/synchroflop_behavior.vhdl
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/synchroflop_entity.vhdl
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/synchroflop_behavior.vhdl
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/synchroflop_entity.vhdl
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -123,29 +131,30 @@ Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "base_system" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "base_system" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "base_system" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'base_system_CPU_cpu'
-Info: cpu:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64//eperlcmd -I /opt/altera_lite/15.1/quartus/linux64//perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=base_system_CPU_cpu --dir=/tmp/alt6904_7850329485305003602.dir/0014_cpu_gen/ --quartus_bindir=/opt/altera_lite/15.1/quartus/linux64/ --verilog --config=/tmp/alt6904_7850329485305003602.dir/0014_cpu_gen//base_system_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2016.04.13 15:31:20 (*) Starting Nios II generation
-Info: cpu: # 2016.04.13 15:31:20 (*)   Checking for plaintext license.
-Info: cpu: # 2016.04.13 15:31:25 (*)   Plaintext license not found.
-Info: cpu: # 2016.04.13 15:31:25 (*)   Checking for encrypted license (non-evaluation).
-Info: cpu: # 2016.04.13 15:31:29 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
-Info: cpu: # 2016.04.13 15:31:29 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2016.04.13 15:31:30 (*)   Creating all objects for CPU
-Info: cpu: # 2016.04.13 15:31:30 (*)     Testbench
-Info: cpu: # 2016.04.13 15:31:30 (*)     Instruction decoding
-Info: cpu: # 2016.04.13 15:31:30 (*)       Instruction fields
-Info: cpu: # 2016.04.13 15:31:30 (*)       Instruction decodes
-Info: cpu: # 2016.04.13 15:31:30 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2016.04.13 15:31:30 (*)       Instruction controls
-Info: cpu: # 2016.04.13 15:31:30 (*)     Pipeline frontend
-Info: cpu: # 2016.04.13 15:31:30 (*)     Pipeline backend
-Info: cpu: # 2016.04.13 15:31:32 (*)   Generating RTL from CPU objects
-Info: cpu: # 2016.04.13 15:31:34 (*)   Creating encrypted RTL
-Info: cpu: # 2016.04.13 15:31:35 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /opt/altera_lite/15.1/quartus/linux64//eperlcmd -I /opt/altera_lite/15.1/quartus/linux64//perl/lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/europa -I /opt/altera_lite/15.1/quartus/sopc_builder/bin/perl_lib -I /opt/altera_lite/15.1/quartus/sopc_builder/bin -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /opt/altera_lite/15.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=base_system_CPU_cpu --dir=/tmp/alt6926_9047885029457299957.dir/0015_cpu_gen/ --quartus_bindir=/opt/altera_lite/15.1/quartus/linux64/ --verilog --config=/tmp/alt6926_9047885029457299957.dir/0015_cpu_gen//base_system_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2016.05.05 12:11:27 (*) Starting Nios II generation
+Info: cpu: # 2016.05.05 12:11:27 (*)   Checking for plaintext license.
+Info: cpu: # 2016.05.05 12:11:32 (*)   Plaintext license not found.
+Info: cpu: # 2016.05.05 12:11:32 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2016.05.05 12:11:38 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2016.05.05 12:11:38 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2016.05.05 12:11:38 (*)   Creating all objects for CPU
+Info: cpu: # 2016.05.05 12:11:38 (*)     Testbench
+Info: cpu: # 2016.05.05 12:11:38 (*)     Instruction decoding
+Info: cpu: # 2016.05.05 12:11:38 (*)       Instruction fields
+Info: cpu: # 2016.05.05 12:11:38 (*)       Instruction decodes
+Info: cpu: # 2016.05.05 12:11:39 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2016.05.05 12:11:39 (*)       Instruction controls
+Info: cpu: # 2016.05.05 12:11:39 (*)     Pipeline frontend
+Info: cpu: # 2016.05.05 12:11:39 (*)     Pipeline backend
+Info: cpu: # 2016.05.05 12:11:41 (*)   Generating RTL from CPU objects
+Info: cpu: # 2016.05.05 12:11:43 (*)   Creating encrypted RTL
+Info: cpu: # 2016.05.05 12:11:44 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'base_system_CPU_cpu'
 Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
 Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
@@ -157,37 +166,37 @@ Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
-Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
 Info: router_010: "mm_interconnect_0" instantiated altera_merlin_router "router_010"
 Info: CPU_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "CPU_data_master_limiter"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: jtag_uart_avalon_jtag_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "jtag_uart_avalon_jtag_slave_burst_adapter"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
-Info: rsp_demux_004: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_004"
+Info: rsp_demux_005: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_005"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: sdram_ctrl_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "sdram_ctrl_s1_rsp_width_adapter"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
-Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobleFilter/quartus_project/base_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file /home/mgehrig2/MSE/EmbHw/SobelFilter/quartus_project/base_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
-Info: avalon_st_adapter_004: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_004"
+Info: avalon_st_adapter_005: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_005"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: error_adapter_0: "avalon_st_adapter_004" instantiated error_adapter "error_adapter_0"
-Info: base_system: Done "base_system" with 46 modules, 110 files
+Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
+Info: base_system: Done "base_system" with 47 modules, 112 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
