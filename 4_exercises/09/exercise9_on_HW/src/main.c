@@ -55,34 +55,34 @@ int main(void)
   int average_total_global_time=0;
 
   int glob_i;
-  for (glob_i = 0; glob_i < 100; glob_i++) {
+  for (glob_i = 0; glob_i < 1; glob_i++) {
 
 	  // Reset the counters before every run
-	  PERF_RESET (PERFORMANCE_COUNTER_0_BASE);
+	  PERF_RESET (PERFORMANCE_COUNTER_0_BASE);				//Reset Performance Counters to 0
+	  PERF_START_MEASURING (PERFORMANCE_COUNTER_0_BASE);	// Start the global Counter
 
 
-	  int trace;
-	  trace++;
+	  //Measure Counter overhead
+	  PERF_BEGIN (PERFORMANCE_COUNTER_0_BASE,1);		//Start overhead Counter
+	  PERF_BEGIN (PERFORMANCE_COUNTER_0_BASE,7);		//Start Dummy measurement
+	  PERF_END (PERFORMANCE_COUNTER_0_BASE,7);			//Stop Dummy measurement
+	  PERF_END (PERFORMANCE_COUNTER_0_BASE,1);			//Stop overhead measurement
 
 
-
-//	  PERF_START_MEASURING (PERFORMANCE_COUNTER_0_BASE);
-	  // original (slow)
+	  // original (slow) (loop1)
+	  PERF_BEGIN (PERFORMANCE_COUNTER_0_BASE,2);		//Start Counter loop1
 	  int i, w, x[1000], y[1000];
 	  for (i = 0; i < 1000; i++) {
 		  x[i] = x[i] + y[i];
 		  if (w)
 			  y[i] = 0;
 	  }
-//	  PERF_STOP_MEASURING (PERFORMANCE_COUNTER_0_BASE);
+	  PERF_END (PERFORMANCE_COUNTER_0_BASE,2);			//Stop Counter loop1
 
 
 
-	  trace++;
-	  trace++;
-
-	  PERF_START_MEASURING (PERFORMANCE_COUNTER_0_BASE);
-	  // unswitched (faster)
+	  // unswitched (faster) (loop2)
+	  PERF_BEGIN (PERFORMANCE_COUNTER_0_BASE,3);		//Start Counter loop2
 	  int i2, w2, x2[1000], y2[1000];
 	  if (w2) {
 		  for (i2 = 0; i2 < 1000; i2++) {
@@ -94,16 +94,23 @@ int main(void)
 			  x2[i2] = x2[i2] + y2[i2];
 		  }
 	  }
-	  PERF_STOP_MEASURING (PERFORMANCE_COUNTER_0_BASE);
+	  PERF_END (PERFORMANCE_COUNTER_0_BASE,3);			//Stop Counter loop2
 
-	  // Performance test result
-	  printf("Global counter\t:%d\n", perf_get_total_time(PERFORMANCE_COUNTER_0_BASE));
-	  average_total_global_time += perf_get_total_time(PERFORMANCE_COUNTER_0_BASE);
+//	  // Performance test result
+//	  printf("loop 1\t:%d\n", perf_get_total_time(PERFORMANCE_COUNTER_0_BASE));
+//	  average_total_global_time += perf_get_total_time(PERFORMANCE_COUNTER_0_BASE);
+//	  perf_print_formatted_report((void *)PERFORMANCE_COUNTER_0_BASE, ALT_CPU_FREQ, 7,
+//	    "Overhead","Loop1","Loop2","Counter4","Counter5","Counter6","Dummy");
 
   }
 
-  printf("Average global time\t:%d\n", average_total_global_time/(glob_i));
-  printf("Anzahl Messungen\t:%d\n", glob_i);
+  // Performance average test result
+//  printf("Average global time\t:%d\n", average_total_global_time/(glob_i));
+//  printf("number of Measurements\t:%d\n", glob_i);
+
+  printf("The following report shows only the last measurement:\n");
+  perf_print_formatted_report((void *)PERFORMANCE_COUNTER_0_BASE, ALT_CPU_FREQ, 7,
+    "Overhead","Loop1","Loop2","Counter4","Counter5","Counter6","Dummy");
 
   return 0;
 }
