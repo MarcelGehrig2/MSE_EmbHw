@@ -139,12 +139,11 @@ ACDS_VERSION := 15.1
 # Define path to the application ELF. 
 # It may be used by the makefile fragments so is defined before including them. 
 # 
-ELF := exercise9_on_HW.elf
+ELF := exercise_10b2.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += src/main.c
-C_SRCS += .metadata/.plugins/org.eclipse.cdt.make.core/specs.c
-CXX_SRCS := .metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp
+C_SRCS := src/main_10b2.c
+CXX_SRCS :=
 ASM_SRCS :=
 
 
